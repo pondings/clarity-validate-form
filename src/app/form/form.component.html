@@ -1,0 +1,30 @@
+<div class="col-md-12">
+    <div class="col-md-12" style="background-color: whitesmoke">
+        <form [formGroup]='form' (submit)='onsubmit(form)'>
+            <div class="form-group row">
+                <div class="col-md-4 row">
+                    <div class="col-md-4">Input String</div>
+                    <div class="col-md-8">
+                        <input appValidator type="text" class="form-control" formControlName='inputString'>
+                    </div>
+                </div>
+                <div class="col-md-4 row">
+                    <div class="col-md-4">Input Number</div>
+                    <div class="col-md-8">
+                        <input [tooltipPos]="'right'" appValidator type="text" class="form-control" formControlName='inputNumber'>
+                    </div>
+                </div>
+                <div class="col-md-4 row">
+                    <div class="col-md-4">Input Decimal</div>
+                    <div class="col-md-8">
+                        <input [tooltipPos]="'bottom-left'" appValidator formControlName='inputDecimal' type="text" class="form-control">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 text-centered">
+                <button type="submit" class="btn btn-primary btn-sm">Submit form</button>
+                <button type="submit" [disabled]='form.invalid' class="btn btn-primary btn-sm">Submit form (Disable while form invalid)</button>
+            </div>
+        </form>
+    </div>
+</div>

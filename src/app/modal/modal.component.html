@@ -1,0 +1,12 @@
+<clr-modal [(clrModalOpen)]="opened" [clrModalSize]="'lg'">
+
+    <h3 class="modal-title">I have a nice title</h3>
+
+    <div class="modal-body">
+        <app-form></app-form>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-outline" (click)="opened = false">Cancel</button>
+        <button type="button" class="btn btn-primary" (click)="opened = false">Ok</button>
+    </div>
+</clr-modal>
